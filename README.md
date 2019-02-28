@@ -21,15 +21,15 @@
 ![Identification results on fddb](https://github.com/bleakie/mxnet-ssh-face-detection/blob/master/image/result/discROC.png)
 
 5. 优化原始版本边缘人脸漏检
-
+![Detection results](https://github.com/bleakie/mxnet-ssh-face-detection/blob/master/image/result/demo_res.jpg)
 
 # 2.安装
 
-##环境
+## 环境
 
 ubuntu16.04 cuda cudnn mxnet以及python的依赖项等
 
-##配置
+## 配置
 
 1. Type `make` to build necessary cxx libs（需要更改python版本时需在Makefile修改对应py的版本）
 
@@ -57,9 +57,11 @@ default.e2e_epoch = 40
 ```
 python train_ssh.py
 ```
+```
 算法对代码中blur>1, invalid>0, occlusion>1的人脸都加上mask，这样会减少误捡，但是同样造成漏检
+```
 
-##人脸识别数据集组成
+## 人脸识别数据集组成
 
     .
     ├── WIDER_train
